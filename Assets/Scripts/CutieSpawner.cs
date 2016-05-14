@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CutieSpawner : MonoBehaviour {
 
-    public FloatRange timeBetweenSpawns, scale;
+    public FloatRange timeBetweenSpawns, scale, randomVelocity, angularVelocity;
     float currSpawnDelay;
 
     public Cutie[] cutiePrefabs;
@@ -28,7 +28,7 @@ public class CutieSpawner : MonoBehaviour {
     // Use this for initialization
     void Start () {
         if (velocity == 0)
-            velocity = 15;
+            velocity = 30;
 	}
 	
 	// Update is called once per frame
@@ -42,8 +42,13 @@ public class CutieSpawner : MonoBehaviour {
         Cutie currCutie = Instantiate<Cutie>(cutiePrefab);
 
         currCutie.transform.localPosition = transform.position;
-        currCutie.transform.localScale = Vector3.one * scale.RandomInRange;
+        currCutie.transform.localScale = Vector3.one * scale.RandomInRangeAlt(0.25f, 1);
         currCutie.transform.localRotation = Random.rotation;
-        currCutie.GetComponent<Rigidbody>().velocity = transform.up * velocity;
+
+        // Randomize velocity 
+        currCutie.GetComponent<Rigidbody>().velocity = transform.up * velocity +
+             Random.onUnitSphere* randomVelocity.RandomInRange;
+        currCutie.GetComponent<Rigidbody>().angularVelocity =
+            Random.onUnitSphere * angularVelocity.RandomInRangeAlt(0, 3);
     }
 }

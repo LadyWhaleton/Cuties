@@ -39,10 +39,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78d2d5284ab4dea498c1e81b6ec4e963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenSpawns: {fileID: 0}
-  scale: {fileID: 0}
+  timeBetweenSpawns: {fileID: 11470066, guid: 87e5999322486814693d4697bea58dce, type: 2}
+  scale: {fileID: 11470066, guid: 87e5999322486814693d4697bea58dce, type: 2}
+  randomVelocity: {fileID: 11470066, guid: 87e5999322486814693d4697bea58dce, type: 2}
+  angularVelocity: {fileID: 11470066, guid: 87e5999322486814693d4697bea58dce, type: 2}
   cutiePrefabs:
-  - {fileID: 0}
+  - {fileID: 11426838, guid: d4bc2715332b24046b4598bbddceea04, type: 2}
   velocity: 0
 --- !u!1001 &100100000
 Prefab:

@@ -22,6 +22,6 @@ public class Cutie : MonoBehaviour {
     void OnTriggerEnter (Collider col)
     {
         if (col.gameObject.tag == "KillZone")
-            Destroy(col.gameObject);
+            Destroy(this.gameObject);
     }
 }

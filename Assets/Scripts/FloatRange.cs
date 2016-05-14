@@ -33,6 +33,11 @@ public class FloatRange : MonoBehaviour {
         get { return Random.Range(min, max);  }
     }
 
+    public float RandomInRangeAlt(float minVal, float maxVal)
+    {
+        return Random.Range(minVal, maxVal);
+    }
+
     void Start() {
         min = 0.05f;
         max = 0.15f;
