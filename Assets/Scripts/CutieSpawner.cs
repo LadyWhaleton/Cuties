@@ -16,7 +16,7 @@ public class CutieSpawner : MonoBehaviour {
         if (timeSinceLastSpawn >= currSpawnDelay)
         {
             timeSinceLastSpawn -= currSpawnDelay;
-            currSpawnDelay = timeBetweenSpawns.RandomInRange;
+            currSpawnDelay = timeBetweenSpawns.RandomInRangeAlt(.10f, .5f);
             SpawnCuties();
         }
     }
@@ -42,7 +42,7 @@ public class CutieSpawner : MonoBehaviour {
         Cutie currCutie = Instantiate<Cutie>(cutiePrefab);
 
         currCutie.transform.localPosition = transform.position;
-        currCutie.transform.localScale = Vector3.one * scale.RandomInRangeAlt(0.25f, 1);
+        currCutie.transform.localScale = Vector3.one * scale.RandomInRangeAlt(0.25f, 0.40f);
         currCutie.transform.localRotation = Random.rotation;
 
         // Randomize velocity 

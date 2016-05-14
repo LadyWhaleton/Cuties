@@ -16,16 +16,15 @@ public class CutieSpawnerRing : MonoBehaviour {
 
 
     void Awake() {
-        numSpawners = transform.childCount;
 
         if (numSpawners == 0)
-            numSpawners = 20;
+            numSpawners = 10;
 
         if (radius == 0)
-            radius = 20;
+            radius = 0.5f;
 
         if (tiltAngle == 0)
-            tiltAngle = -20;
+            tiltAngle = 2.5f;
 
         for (int i = 0; i < numSpawners; i++)
             CreateSpawner(i);
@@ -34,8 +33,7 @@ public class CutieSpawnerRing : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {

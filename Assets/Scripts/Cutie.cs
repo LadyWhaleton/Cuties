@@ -22,6 +22,18 @@ public class Cutie : MonoBehaviour {
     void OnTriggerEnter (Collider col)
     {
         if (col.gameObject.tag == "KillZone")
+        {
             Destroy(this.gameObject);
+            Debug.Log("Death!");
+        }
+    }
+
+    void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "KillZone")
+        {
+            Destroy(this.gameObject);
+            Debug.Log("Death by cube!");
+        }
     }
 }
