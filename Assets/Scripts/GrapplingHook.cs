@@ -2,35 +2,68 @@
 using System.Collections;
 
 public class GrapplingHook : MonoBehaviour {
-    public GameObject hook;
-    bool hooked;
+    public GameObject bullet;
+    Camera cam;
+    public float velocity;
+    float length;
+    public float hookspeed;
+    public GameObject player;
+    bool hooking;
+    RaycastHit hit;
+
+
 
     private void shootHook()
     {
-        GameObject bullet = (GameObject)Instantiate(hook, transform.position, Quaternion.identity);
+        Vector3 dir = transform.TransformDirection(Vector3.forward);
+        //if (!hooking)
+        //{
+        //    bullet = (GameObject)Instantiate(bullet, transform.position, transform.rotation);
+        //}
 
-        bullet.GetComponent<Rigidbody>().velocity = new Vector3(1, 0, 0);
+        hooking = true;
+        Debug.DrawRay(transform.position, dir, Color.yellow, 100);
+        Ray ray = new Ray(transform.position, dir);
+        if (!Physics.Raycast(transform.position, dir, out hit, length))
+        {
+            length += hookspeed;
+            Debug.Log(length);
+            bullet.transform.position = transform.forward * length;
+
+
+        }
+        else
+        {
+            player.transform.position = hit.point;
+            length = 0;
+            Destroy(bullet.gameObject);
+            hooking = false;
+        }
+
     }
 
-    private void pull()
-    {
-
-    }
 
 	// Use this for initialization
 	void Start () {
-        hooked = false;
+        hooking = false;
+        cam = Camera.main;
+        length = 0;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButton(1))
         {
             shootHook();
-            Debug.Log("Pressed right click.");
+            //Debug.Log("Pressed right click.");
         }
 
-        hooked = false;
+        else
+        {
+            length = 0;
+            hooking = false;
+
+        }
 
     }
 }

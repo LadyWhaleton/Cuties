@@ -51,6 +51,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &161014
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 483314}
+  - 114: {fileID: 11444702}
+  m_Layer: 0
+  m_Name: HookSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &179246
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +108,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136994}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
-  m_LocalPosition: {x: 0, y: -1.1, z: 1.8}
+  m_LocalPosition: {x: 0, y: -0.55, z: 1.8}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 435188}
@@ -109,6 +125,7 @@ Transform:
   m_Children:
   - {fileID: 434318}
   - {fileID: 448490}
+  - {fileID: 483314}
   m_Father: {fileID: 492740}
   m_RootOrder: 0
 --- !u!4 &448490
@@ -119,7 +136,7 @@ Transform:
   m_GameObject: {fileID: 107860}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: -1, z: 1.8}
-  m_LocalScale: {x: 0.5, y: 0.2, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 435188}
   m_RootOrder: 1
@@ -136,6 +153,18 @@ Transform:
   - {fileID: 492740}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &483314
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161014}
+  m_LocalRotation: {x: 2.3294433e-10, y: 4.0381565e-10, z: 0.0000000010492158, w: 1}
+  m_LocalPosition: {x: 0, y: -1.04, z: 2.46}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435188}
+  m_RootOrder: 2
 --- !u!4 &492740
 Transform:
   m_ObjectHideFlags: 1
@@ -408,6 +437,20 @@ MonoBehaviour:
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
   GunShooter: {fileID: 136994}
+--- !u!114 &11444702
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 161014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e76c7917cf7767418ae8b2a347b4306, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hook: {fileID: 198314, guid: 28ba3403489e00e4facef019e97fa121, type: 2}
+  velocity: 1
+  hookspeed: 0
 --- !u!114 &11452884
 MonoBehaviour:
   m_ObjectHideFlags: 1
