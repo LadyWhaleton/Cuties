@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11426838}
   m_Layer: 0
   m_Name: Cutie
-  m_TagString: Untagged
+  m_TagString: Cutie
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: 0
+  GameManager: {fileID: 189560, guid: eb1cb33b4230d95489c0b84b9010084a, type: 2}
 --- !u!135 &13509644
 SphereCollider:
   m_ObjectHideFlags: 1

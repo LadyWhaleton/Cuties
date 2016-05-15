@@ -29,9 +29,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLeft: 0
-  timerText: {fileID: 0}
-  score: 0
-  scoreText: {fileID: 0}
+  timerText: {fileID: 11416158, guid: 0290cf117487675488472495123fe12b, type: 2}
+  score: 6
+  scoreText: {fileID: 11473312, guid: 0290cf117487675488472495123fe12b, type: 2}
 --- !u!222 &22247342
 CanvasRenderer:
   m_ObjectHideFlags: 1

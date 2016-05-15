@@ -5,9 +5,13 @@ public class Cutie : MonoBehaviour {
 
     Rigidbody body;
     public float velocity;
+    public GameObject GameManager;
 
 	// Use this for initialization
 	void Start () {
+
+        if (GameManager == null)
+            GameManager = GameObject.Find("GameManager");
         body = GetComponent<Rigidbody>();
 
         if (velocity == 0)
@@ -24,7 +28,11 @@ public class Cutie : MonoBehaviour {
         if (col.gameObject.tag == "KillZone")
         {
             Destroy(this.gameObject);
-            Debug.Log("Death!");
+        }
+
+        if (col.CompareTag("Cup"))
+        {
+            Timer.instance.IncrementScore();
         }
     }
 
@@ -33,7 +41,12 @@ public class Cutie : MonoBehaviour {
         if (col.gameObject.tag == "KillZone")
         {
             Destroy(this.gameObject);
-            Debug.Log("Death by cube!");
         }
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.CompareTag("Cup"))
+            Timer.instance.DecrementScore();
     }
 }
