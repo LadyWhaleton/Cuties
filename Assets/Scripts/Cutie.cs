@@ -38,10 +38,14 @@ public class Cutie : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+
         if (col.gameObject.tag == "KillZone")
         {
             Destroy(this.gameObject);
         }
+
+
+      
     }
 
     void OnTriggerExit(Collider col)
