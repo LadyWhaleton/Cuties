@@ -28,7 +28,7 @@ public class CutieSpawner : MonoBehaviour {
     // Use this for initialization
     void Start () {
         if (velocity == 0)
-            velocity = 30;
+            velocity = 18;
 	}
 	
 	// Update is called once per frame
@@ -42,7 +42,7 @@ public class CutieSpawner : MonoBehaviour {
         Cutie currCutie = Instantiate<Cutie>(cutiePrefab);
 
         currCutie.transform.localPosition = transform.position;
-        currCutie.transform.localScale = Vector3.one * scale.RandomInRangeAlt(0.25f, 0.40f);
+        currCutie.transform.localScale = Vector3.one * scale.RandomInRangeAlt(0.05f, 0.1f);
         currCutie.transform.localRotation = Random.rotation;
 
         // Randomize velocity 
