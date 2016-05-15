@@ -36,7 +36,6 @@ public class GrapplingHook : MonoBehaviour {
         {
             player.transform.position = hit.point;
             length = 0;
-            Destroy(bullet.gameObject);
             hooking = false;
         }
 
