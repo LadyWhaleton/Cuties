@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour {
     public Text scoreText;
 
     public static Timer instance;
+    public GameObject GameOver;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +22,8 @@ public class Timer : MonoBehaviour {
         score = 0;
         numCutiesInCup = 0;
         scoreText.text = "Score: " + score.ToString();
+
+        GameOver.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -42,6 +45,7 @@ public class Timer : MonoBehaviour {
             timerText.text = "Time Left: " + intTime.ToString();
 
             Time.timeScale = 0;
+            GameOver.gameObject.SetActive(true);
         }
         
 	}

@@ -286,7 +286,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!114 &1191611298 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11473312, guid: 0290cf117487675488472495123fe12b,
+  m_PrefabParentObject: {fileID: 11466392, guid: 0290cf117487675488472495123fe12b,
     type: 2}
   m_PrefabInternal: {fileID: 186339299}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
@@ -667,9 +667,17 @@ Prefab:
       propertyPath: score
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11492012, guid: eb1cb33b4230d95489c0b84b9010084a, type: 2}
+      propertyPath: GameOver
+      value: 
+      objectReference: {fileID: 1799358846}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb1cb33b4230d95489c0b84b9010084a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1799358846 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 164130, guid: 0290cf117487675488472495123fe12b, type: 2}
+  m_PrefabInternal: {fileID: 186339299}
 --- !u!1 &1814514699
 GameObject:
   m_ObjectHideFlags: 0
