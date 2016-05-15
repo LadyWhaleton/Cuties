@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         instance = this;
-        timeLeft = 30;
+        timeLeft = 150;
         score = 0;
         numCutiesInCup = 0;
         scoreText.text = "Score: " + score.ToString();
