@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityStandardAssets.Utility;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 namespace UnityStandardAssets.Characters.FirstPerson
@@ -91,6 +92,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 GunShooter.gameObject.SetActive(true);
             else
                 GunShooter.gameObject.SetActive(false);
+
+            // Check if Exit or Retry key
+            if (Input.GetKeyDown(KeyCode.J))
+                Application.Quit();
+
+            else if (Input.GetKeyDown(KeyCode.K))
+            {
+                Scene scene = SceneManager.GetActiveScene();
+                SceneManager.LoadScene(scene.name);
+            }
+
         }
 
 
