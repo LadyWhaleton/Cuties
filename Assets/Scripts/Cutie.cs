@@ -30,10 +30,14 @@ public class Cutie : MonoBehaviour {
 
     void OnCollisionEnter(Collision col)
     {
+
         if (col.gameObject.tag == "KillZone")
         {
             Destroy(this.gameObject);
             Debug.Log("Death by cube!");
         }
+
+
+      
     }
 }
