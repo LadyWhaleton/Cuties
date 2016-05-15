@@ -17,9 +17,9 @@ public class gameManager : MonoBehaviour {
     void Awake()
     {
         spawnLocations = new List<Vector3>();
-        spawnLocations.Add(new Vector3(-.38f, 2.39f, -2.22f));
-        spawnLocations.Add(new Vector3(-7.25f, 2.28f, -2.22f));
-        spawnLocations.Add(new Vector3(-.38f, 2.39f, 3.22f));
+        spawnLocations.Add(new Vector3(-.38f, 2f, -2f));
+        spawnLocations.Add(new Vector3(-7.25f, 2f, -2f));
+        spawnLocations.Add(new Vector3(-.38f, 2f, 3f));
 
     }
     void Start () {
